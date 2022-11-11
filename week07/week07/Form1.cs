@@ -71,8 +71,9 @@ namespace week07
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Stream mystream;
-            SaveFileDialog sfd = new SaveFileDialog();
+            
+
+
 
         }
     }
