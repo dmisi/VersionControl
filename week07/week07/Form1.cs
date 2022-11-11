@@ -72,6 +72,18 @@ namespace week07
         private void btnSave_Click(object sender, EventArgs e)
         {
             
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            sfd.InitialDirectory = Application.StartupPath;
+            sfd.DefaultExt = "txt";
+            if (sfd.ShowDialog() != DialogResult.OK) return;
+            using (StreamWriter sw=new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+            {
+                sw.Write("Időszak");
+                sw.Write("Nyereség");
+            }
+
+            
 
 
 
