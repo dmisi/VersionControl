@@ -14,12 +14,13 @@ namespace week06
     public partial class Form1 : Form
     {
         List<Ball> _balls = new List<Ball>();
-        private BallFactory ballFactory;
+
+        private BallFactory _ballFactory;
 
         public BallFactory Factory
         {
-            get { return ballFactory; }
-            set { ballFactory = value; }
+            get { return _ballFactory; }
+            set { _ballFactory = value; }
         }
 
 
@@ -27,6 +28,7 @@ namespace week06
         public Form1()
         {
             InitializeComponent();
+            Factory = new BallFactory();
         }
 
         private void createTimer_Tick(object sender, EventArgs e)
