@@ -45,7 +45,7 @@ namespace week09
 
             }
 
-        public List<Person> GetPopulation(string csvpath)
+            List<Person> GetPopulation(string csvpath)
         {
             List<Person> population = new List<Person>();
 
@@ -66,7 +66,7 @@ namespace week09
             return population;
         }
 
-        public List<DeathProbability> GetDeathProbabilities(string csvpath)
+            List<DeathProbability> GetDeathProbabilities(string csvpath)
         {
             List<DeathProbability> deaths = new List<DeathProbability>();
 
@@ -87,7 +87,7 @@ namespace week09
             return deaths;
         }
 
-        public List<BirthProbability> GetBirthProbabilities(string csvpath)
+            List<BirthProbability> GetBirthProbabilities(string csvpath)
         {
             List<BirthProbability> births = new List<BirthProbability>();
 
@@ -142,5 +142,6 @@ namespace week09
                     újszülött.Gender = (Gender)(rng.Next(1, 3));
                     Population.Add(újszülött);
                 };
+            }
         }
-    }
+    
