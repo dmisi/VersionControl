@@ -37,8 +37,7 @@ namespace week10
 
             gc.Start();
 
-            gc.AddPlayer(nbrOfSteps);
-            gc.Start(true);
+
             ga = gc.ActivateDisplay();
             this.Controls.Add(ga);
         }
