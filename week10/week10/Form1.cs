@@ -15,21 +15,36 @@ namespace week10
     {
         GameController gc = new GameController();
         GameArea ga;
+        int populationSize = 100;
+        int nbrOfSteps = 10;
+        int nbrOfStepsIncrement = 10;
+        int generation = 1;
 
-        
 
         public Form1()
         {
             InitializeComponent();
-            int populationSize = 100;
-            int nbrOfSteps = 10;
-            int nbrOfStepsIncrement = 10;
-            int generation = 1;
+
+            gc.GameOver += Gc_GameOver;
+
+            for (int i = 0; i < populationSize; i++)
+            {
+                gc.AddPlayer(nbrOfSteps);
+            }
+            gc.Start();
 
             gc.AddPlayer(nbrOfSteps);
             gc.Start(true);
             ga = gc.ActivateDisplay();
             this.Controls.Add(ga);
+        }
+
+        private void Gc_GameOver(object sender)
+        {
+            generation++;
+            label1.Text = string.Format(
+                "{0}. generáció",
+                generation);
         }
     }
 }
