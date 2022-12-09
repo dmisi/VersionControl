@@ -16,17 +16,18 @@ namespace week10
         GameController gc = new GameController();
         GameArea ga;
 
-        int populationSize = 100;
-        int nbrOfSteps = 10;
-        int nbrOfStepsIncrement = 10;
-        int generation = 1;
+        
 
         public Form1()
         {
             InitializeComponent();
+            int populationSize = 100;
+            int nbrOfSteps = 10;
+            int nbrOfStepsIncrement = 10;
+            int generation = 1;
 
-            //gc.AddPlayer();
-            //gc.Start(true);
+            gc.AddPlayer(nbrOfSteps);
+            gc.Start(true);
             ga = gc.ActivateDisplay();
             this.Controls.Add(ga);
         }
